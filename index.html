@@ -73,10 +73,10 @@ document.getElementById("userButton").addEventListener("click", function() {
 
   // 3️⃣ Display result on the page
   if (result.isPalindrome) {
-    document.getElementById("result")..innerHTML =
+    document.getElementById("result").innerHTML =
       '"' + userText + '" <span style="color:red; font-weight:bold;"> is a palindrome! It reads backwards as </span> "' + result.reversed + '".';
   } else {
-    document.getElementById("result")..innerHTML =
+    document.getElementById("result").innerHTML =
       '"' + userText + '" <span style="color:red; font-weight:bold;"> is not a palindrome! It reads backwards as </span> "' + result.reversed + '".';
   }
 }); // ← this closes the event listener
@@ -84,5 +84,6 @@ document.getElementById("userButton").addEventListener("click", function() {
 
 </body>
 </html>
+
 
 
