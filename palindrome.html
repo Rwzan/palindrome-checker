@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Palindrome Checker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style> 
+  form { 
+    text-align: center; 
+  }
+    
+  #myText { 
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  input {
+    width: 40%;
+    padding: 5px;
+    border: 4px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+
+  label[for="myText"] {
+    display: block;
+    color: #800020;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #result {
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align: center; color:#800020;">Palindrome Checker</h1>
+
+<p style="text-align: center;">
+  <span style="background-color: #FFD700;">
+    Definition of <b>palindrome</b>
+  </span>: a word, phrase, or sequence that reads the same backward as forward, e.g., <i>madam</i> or <i>nurses run</i>.
+</p>
+
+<form>
+  <div class="userInput">
+    <label for="myText">Enter a word or a phrase</label>
+    <input id="myText" type="text">
+    <button type="button" id="userButton">Check</button>
+    <p id="result"></p>
+  </div>
+</form>
+
+<script>
+// 1️⃣ Function to check if it's a palindrome
+function checkPilandrome(myText) {
+  let cleaned = myText.toLowerCase().replace(/\s/g, "");
+  let reversed = cleaned.split('').reverse().join("");
+  return { isPalindrome: cleaned === reversed, reversed: reversed };
+}
+
+// 2️⃣ Event listener for the button
+document.getElementById("userButton").addEventListener("click", function() {
+  let userText = document.getElementById("myText").value; // get what the user typed
+  let result = checkPilandrome(userText); // call the function
+
+  // 3️⃣ Display result on the page
+  if (result.isPalindrome) {
+    document.getElementById("result").innerText =
+      '"' + userText + '" is a palindrome! It reads backwards as "' + result.reversed + '".';
+  } else {
+    document.getElementById("result").innerText =
+      '"' + userText + '" is not a palindrome! It reads backwards as "' + result.reversed + '".';
+  }
+}); // ← this closes the event listener
+</script>
+
+</body>
+</html>
