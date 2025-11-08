@@ -51,7 +51,7 @@
 
 <form>
   <div class="userInput">
-    <label for="myText">Enter a word or a phrase</label>
+    <label for="myText">Enter any word or phrase</label>
     <input id="myText" type="text">
     <button type="button" id="userButton">Check</button>
     <p id="result"></p>
@@ -73,15 +73,16 @@ document.getElementById("userButton").addEventListener("click", function() {
 
   // 3️⃣ Display result on the page
   if (result.isPalindrome) {
-    document.getElementById("result").innerText =
-      '"' + userText + '" is a palindrome! It reads backwards as "' + result.reversed + '".';
+    document.getElementById("result")..innerHTML =
+      '"' + userText + '" <span style="color:red; font-weight:bold;"> is a palindrome! It reads backwards as </span> "' + result.reversed + '".';
   } else {
-    document.getElementById("result").innerText =
-      '"' + userText + '" is not a palindrome! It reads backwards as "' + result.reversed + '".';
+    document.getElementById("result")..innerHTML =
+      '"' + userText + '" <span style="color:red; font-weight:bold;"> is not a palindrome! It reads backwards as </span> "' + result.reversed + '".';
   }
 }); // ← this closes the event listener
 </script>
 
 </body>
 </html>
+
 
