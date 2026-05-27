@@ -1,4 +1,3 @@
-
 # Palindrome Checker 🔄
 
 A simple, clean, and interactive web application built with HTML, CSS, and vanilla JavaScript that checks whether a given word or phrase is a palindrome (reads the same backward as forward).
