@@ -2,6 +2,9 @@
 
 A simple, clean, and interactive web application built with HTML, CSS, and vanilla JavaScript that checks whether a given word or phrase is a palindrome (reads the same backward as forward).
 
+###Live Link
+https://rwzan.github.io/palindrome-checker/
+
 ## 🚀 Features
 
 *   **Real-time Validation:** Instantly checks if the input text is a palindrome upon clicking the button.
